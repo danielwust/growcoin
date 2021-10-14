@@ -9,8 +9,7 @@ import imagine1 from "assets/img/sidebar-1.jpg";
 import imagine2 from "assets/img/sidebar-2.jpg";
 import imagine3 from "assets/img/sidebar-3.jpg";
 import imagine4 from "assets/img/sidebar-4.jpg";
-
-import Button from "components/CustomButtons/Button.js";
+// import Button from "components/CustomButtons/Button.js";
 
 export default function FixedPlugin(props) {
   const [classes, setClasses] = React.useState("dropdown show");

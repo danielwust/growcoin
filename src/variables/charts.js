@@ -53,7 +53,7 @@ const dailySalesChart = {
   },
 };
 
-const emailsSubscriptionChart = {
+const notas = {
   data: {
     labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     series: [[71, 73, 76, 82, 84, 86, 88, 90, 95, 100]],
@@ -152,6 +152,6 @@ const completedTasksChart = {
 
 module.exports = {
   dailySalesChart,
-  emailsSubscriptionChart,
+  notas,
   completedTasksChart,
 };

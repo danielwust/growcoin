@@ -16,6 +16,8 @@ import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 
+import logowhite from "assets/img/logowhite.png"
+
 const useStyles = makeStyles(styles);
 
 export default function Sidebar(props) {
@@ -77,12 +79,13 @@ export default function Sidebar(props) {
   var brand = (
     <div className={classes.logo}>
       <a
-        href="https://www.creative-tim.com?ref=mdr-sidebar"
+        href="https://www.growdev.com.br"
         className={classNames(classes.logoLink)}
         target="_blank"
       >
         <div className={classes.logoImage}>
-          <img src={logo} alt="logo" className={classes.img} />
+          {/* <img src={logo} alt="logo" className={classes.img} />*/}
+          <img src={logowhite} alt="logo" className={classes.img} />
         </div>
         {logoText}
       </a>

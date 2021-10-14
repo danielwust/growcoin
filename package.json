@@ -1,7 +1,7 @@
 {
-  "name": "material-dashboard-react",
-  "version": "1.10.0",
-  "description": "Material Dashboard React. Coded by Creative Tim",
+  "name": "growcoin",
+  "version": "1.0.0",
+  "description": "Personalized by Daniel for Growdev",
   "private": false,
   "main": "dist/index.js",
   "dependencies": {
@@ -35,7 +35,7 @@
     "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
   },
   "keywords": [],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Creative Tim (https://www.creative-tim.com/) and Daniel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"

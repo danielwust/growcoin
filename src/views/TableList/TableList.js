@@ -58,17 +58,17 @@ export default function TableList() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["ID", "Nome", "Edição", "Programa", "Notas"]}
+              tableHead={["ID", "Nome", "Edição", "Programa","Saldo GrowCoins", "Notas"]}
               tableData={[
-                ["1", "Daniel Wust", "4ª", "Starter", "100, 99, 100, 99"],
-                ["2", "Pamela", "4ª", "Starter", "99, 98, 99, 98"],
-                ["3", "Kley", "4ª", "Starter", "98, 97, 98, 97"],
-                ["4", "Dani", "4ª", "Starter", "97, 96, 97, 96"],
-                ["5", "Usuario", "3ª", "Starter", "90, 86, 90, 86"],
-                ["6", "Usuario", "2ª", "Starter", "90, 86, 90, 86"],
-                ["7", "Usuario", "5ª", "Starter", "90, 86, 90, 86"],
-                ["8", "Usuario", "6ª", "Starter", "90, 86, 90, 86"],
-                ["9", "Usuario", "1ª", "Starter", "90, 86, 90, 86"],
+                ["1", "Daniel Wust", "4ª", "Starter", "9999", "100, 99, 100, 99"],
+                ["2", "Pamela", "4ª", "Starter", "9800", "99, 98, 99, 98"],
+                ["3", "Kley", "4ª", "Starter", "9700", "98, 97, 98, 97"],
+                ["4", "Dani", "4ª", "Starter", "9600", "97, 96, 97, 96"],
+                ["5", "Usuario", "3ª", "Starter", "3000", "90, 86, 90, 86"],
+                ["6", "Usuario", "2ª", "Starter", "2000", "90, 86, 90, 86"],
+                ["7", "Usuario", "5ª", "Starter", "1100", "90, 86, 90, 86"],
+                ["8", "Usuario", "6ª", "Starter", "500", "90, 86, 90, 86"],
+                ["9", "Usuario", "1ª", "Starter", "0", "90, 86, 90, 86"],
               ]}
             />
           </CardBody>

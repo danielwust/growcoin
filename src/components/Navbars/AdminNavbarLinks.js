@@ -37,15 +37,15 @@ export default function AdminNavbarLinks() {
   const handleCloseNotification = () => {
     setOpenNotification(null);
   };
-  const handleClickProfile = (event) => {
+  const handleClickProfile = (event) => { // no click no icone perfil
     if (openProfile && openProfile.contains(event.target)) {
-      setOpenProfile(null);
+    setOpenProfile(null); // no fechar
     } else {
-      setOpenProfile(event.currentTarget);
+    setOpenProfile(event.currentTarget); //  no abrir
     }
   };
   const handleCloseProfile = () => {
-    setOpenProfile(null);
+    setOpenProfile(null); // indepenente da opcao, eh no fechar
   };
   return (
     <div>
@@ -122,31 +122,19 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      Mike John responded to your email
+                      Novas notas na última atividade
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      You have 5 new tasks
+                      Voce recebeu 2 solicitações
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      You{"'"}re now friend with Andrew
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseNotification}
-                      className={classes.dropdownItem}
-                    >
-                      Another Notification
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseNotification}
-                      className={classes.dropdownItem}
-                    >
-                      Another One
+                      Sua entrega foi marcada com sucesso!
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
@@ -197,20 +185,20 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseProfile}
                       className={classes.dropdownItem}
                     >
-                      Profile
+                      Meu Perfil
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseProfile}
                       className={classes.dropdownItem}
                     >
-                      Settings
+                      Configurações
                     </MenuItem>
                     <Divider light />
                     <MenuItem
                       onClick={handleCloseProfile}
                       className={classes.dropdownItem}
                     >
-                      Logout
+                      Encerrar sessão
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
