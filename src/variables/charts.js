@@ -1,23 +1,12 @@
-// ##############################
-// // // javascript library for creating charts
-// #############################
 var Chartist = require("chartist");
-
-// ##############################
-// // // variables used to create animation on charts
-// #############################
 var delays = 80,
   durations = 500;
 var delays2 = 80,
   durations2 = 500;
 
-// ##############################
-// // // Daily Sales
-// #############################
-
 const dailySalesChart = {
   data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
+    labels: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª", "7ª"],
     series: [[12, 17, 7, 17, 23, 18, 38]],
   },
   options: {
@@ -25,7 +14,7 @@ const dailySalesChart = {
       tension: 0,
     }),
     low: 0,
-    high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    high: 50,
     chartPadding: {
       top: 0,
       right: 0,
@@ -33,7 +22,6 @@ const dailySalesChart = {
       left: 0,
     },
   },
-  // for animation
   animation: {
     draw: function (data) {
       if (data.type === "line" || data.type === "area") {
@@ -65,34 +53,17 @@ const dailySalesChart = {
   },
 };
 
-// ##############################
-// // // Email Subscriptions
-// #############################
-
 const emailsSubscriptionChart = {
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]],
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    series: [[71, 73, 76, 82, 84, 86, 88, 90, 95, 100]],
   },
   options: {
     axisX: {
       showGrid: false,
     },
-    low: 0,
-    high: 1000,
+    low: 70,
+    high: 100,
     chartPadding: {
       top: 0,
       right: 5,
@@ -130,21 +101,17 @@ const emailsSubscriptionChart = {
   },
 };
 
-// ##############################
-// // // Completed Tasks
-// #############################
-
 const completedTasksChart = {
   data: {
-    labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-    series: [[230, 750, 450, 300, 280, 240, 200, 190]],
+    labels: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª", "7ª", "8ª"],
+    series: [[70, 58, 47, 35, 30, 46, 20, 15]],
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
       tension: 0,
     }),
     low: 0,
-    high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    high: 100,
     chartPadding: {
       top: 0,
       right: 0,
