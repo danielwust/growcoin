@@ -26,12 +26,12 @@ import GridItem from "components/Grid/GridItem.js";
 import Table from "components/Table/Table.js";
 import Tasks from "components/Tasks/Tasks.js";
 import Card from "components/Card/Card.js";
-
-import { bugs, website, server } from "variables/general.js";
+ // external data
+import { solicitacoes, entregas, problemas } from "variables/general.js";
 
 import {
   dailySalesChart,
-  emailsSubscriptionChart,
+  notas,
   completedTasksChart,
 } from "variables/charts.js";
 
@@ -150,11 +150,11 @@ export default function Dashboard() {
             <CardHeader color="warning">
               <ChartistGraph
                 className="ct-chart"
-                data={emailsSubscriptionChart.data}
+                data={notas.data}
                 type="Bar"
-                options={emailsSubscriptionChart.options}
-                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                listener={emailsSubscriptionChart.animation}
+                options={notas.options}
+                responsiveOptions={notas.responsiveOptions}
+                listener={notas.animation}
               />
             </CardHeader>
             <CardBody>
@@ -194,7 +194,7 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
-            title="Tasks:"
+            title=""
             headerColor="primary"
             tabs={[
               {
@@ -202,9 +202,9 @@ export default function Dashboard() {
                 tabIcon: NotificationsActiveIcon,
                 tabContent: (
                   <Tasks
-                    checkedIndexes={[0]}
-                    tasksIndexes={[0, 1]}
-                    tasks={website}
+                    checkedIndexes={[0, 3]}
+                    tasksIndexes={[0, 1, 2, 3]}
+                    tasks={solicitacoes}
                   />
                 ),
               },
@@ -215,7 +215,7 @@ export default function Dashboard() {
                   <Tasks
                     checkedIndexes={[1]}
                     tasksIndexes={[0, 1, 2]}
-                    tasks={server}
+                    tasks={entregas}
                   />
                 ),
               },
@@ -224,9 +224,9 @@ export default function Dashboard() {
                 tabIcon: BugReport,
                 tabContent: (
                   <Tasks
-                    checkedIndexes={[0, 3]}
-                    tasksIndexes={[0, 1, 2, 3]}
-                    tasks={bugs}
+                    checkedIndexes={[0]}
+                    tasksIndexes={[0, 1]}
+                    tasks={problemas}
                   />
                 ),
               },

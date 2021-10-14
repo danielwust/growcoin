@@ -35,7 +35,7 @@ import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 
 import {
   dailySalesChart,
-  emailsSubscriptionChart,
+  notas,
   completedTasksChart,
 } from "variables/charts.js";
 
@@ -174,11 +174,11 @@ export default function RTLPage() {
             <CardHeader color="warning">
               <ChartistGraph
                 className="ct-chart"
-                data={emailsSubscriptionChart.data}
+                data={notas.data}
                 type="Bar"
-                options={emailsSubscriptionChart.options}
-                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                listener={emailsSubscriptionChart.animation}
+                options={notas.options}
+                responsiveOptions={notas.responsiveOptions}
+                listener={notas.animation}
               />
             </CardHeader>
             <CardBody>

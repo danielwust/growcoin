@@ -235,7 +235,7 @@ export default function Notifications() {
                   place="tl"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={tl}
                   closeNotification={() => setTL(false)}
                   close
@@ -253,7 +253,7 @@ export default function Notifications() {
                   place="tc"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={tc}
                   closeNotification={() => setTC(false)}
                   close
@@ -271,7 +271,7 @@ export default function Notifications() {
                   place="tr"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={tr}
                   closeNotification={() => setTR(false)}
                   close
@@ -295,7 +295,7 @@ export default function Notifications() {
                   place="bl"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={bl}
                   closeNotification={() => setBL(false)}
                   close
@@ -313,7 +313,7 @@ export default function Notifications() {
                   place="bc"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={bc}
                   closeNotification={() => setBC(false)}
                   close
@@ -331,7 +331,7 @@ export default function Notifications() {
                   place="br"
                   color="info"
                   icon={AddAlert}
-                  message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
+                  message="Welcome to growcoin."
                   open={br}
                   closeNotification={() => setBR(false)}
                   close
