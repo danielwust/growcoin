@@ -6,14 +6,7 @@ import Person from "@material-ui/icons/Person";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import TableList from "views/TableList/TableList.js";
-
-// import NotificationsPage from "views/Notifications/Notifications.js";
-// import Notifications from "@material-ui/icons/Notifications";
-// import LibraryBooks from "@material-ui/icons/LibraryBooks";
-// import Typography from "views/Typography/Typography.js";
-// import LocationOn from "@material-ui/icons/LocationOn";
-// import Unarchive from "@material-ui/icons/Unarchive";
-// import Maps from "views/Maps/Maps.js";
+import TableListEditions from "views/TableList/TableListEditions.js";
 
 const dashboardRoutes = [
   {
@@ -28,8 +21,16 @@ const dashboardRoutes = [
     path: "/table",
     name: "Lista Usuarios",
     rtlName: "قائمة الجدول",
-    icon: "content_paste",
+    icon: "list",
     component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/editions",
+    name: "Lista Programas",
+    rtlName: "قائمة الجدول",
+    icon: "content_paste",
+    component: TableListEditions,
     layout: "/admin",
   },
   {
@@ -48,32 +49,6 @@ const dashboardRoutes = [
     component: UserProfile, //mudar rota
     layout: "/admin",
   },
-  /*
-  {
-    path: "/maps",
-    name: "Mapas",
-    rtlName: "خرائط",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin",
-  },
-  {
-    path: "/notifications",
-    name: "Notificações",
-    rtlName: "إخطارات",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin",
-  },
-  {
-    path: "/typography",
-    name: "Tipografia",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin",
-  },
-*/
 ];
 
 export default dashboardRoutes;
