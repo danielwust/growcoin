@@ -1,7 +1,8 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 // import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 // core components
@@ -34,6 +35,10 @@ const styles = {
     marginBottom: "3px",
     textDecoration: "none",
   },
+  selects: {
+    margin: "2.5%",
+    minWidth: "45%",
+  },
 };
 
 const useStyles = makeStyles(styles);
@@ -46,87 +51,50 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Editar Perfil</h4>
-              <p className={classes.cardCategoryWhite}>Perfil do GrowDever</p>
+              <h4 className={classes.cardTitleWhite}>Adicionar Lançamento</h4>
+              <p className={classes.cardCategoryWhite}>GrowDever</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Primeiro Nome"
-                    id="first-name"
-                    formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
+                <GridItem xs={12} sm={12} md={12}>
+                  <Select className={classes.selects}
+                    labelId="growdever"
+                    id="growdever"
+                    value={1}
+                    onChange={1+1}
+                    >
+                    <MenuItem value={1}>Daniel</MenuItem>
+                    <MenuItem value={2}>Pamela</MenuItem>
+                    <MenuItem value={3}>Kley</MenuItem>
+                    <MenuItem value={4}>Dani</MenuItem>
+                  </Select>
+                  <Select className={classes.selects}
+                    labelId="growdever"
+                    value={1}
+                    id="tipo"
+                    >
+                    <MenuItem value={1}>Entrada</MenuItem>
+                    <MenuItem value={2}>Saida</MenuItem>
+                  </Select>
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={5}>
                   <CustomInput
-                    labelText="Último Nome"
-                    id="last-name"
-                    formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Edição"
-                    id="edition"
-                    formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Programa"
-                    id="program"
-                    formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Telefone - Whatsapp"
+                    labelText="Número"
                     id="phone"
+                    success
                     formControlProps={{
+                      disabled: true,
                       fullWidth: true,
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={7}>
                   <CustomInput
                     labelText="Email"
                     id="email"
+                    success
                     formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Senha"
-                    id="password"
-                    type="password"
-                    formControlProps={{
-                      fullWidth: true,
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Confirmação Senha"
-                    id="repassword"
-                    type="password"
-                    formControlProps={{
+                      disabled: true,
                       fullWidth: true,
                     }}
                   />
@@ -134,15 +102,9 @@ export default function UserProfile() {
               </GridContainer>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
-                <CustomInput
-                    labelText="BIOGRAFIA"
-                    formControlProps={{
-                      disabled: true,
-                    }}
-                  />
                   <CustomInput
-                    labelText="Este campo é privado e somente visivel para administração"
-                    id="about-me"
+                    labelText="Informações do lançamento"
+                    id="about"
                     formControlProps={{
                       fullWidth: true,
                     }}
@@ -155,7 +117,16 @@ export default function UserProfile() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Atualizar Perfil</Button>
+              <GridItem xs={12} sm={12} md={6}>
+                <CustomInput
+                  labelText="Valor do lançamento"
+                  id="valor"
+                  formControlProps={{
+                    fullWidth: true,
+                  }}
+                />
+              </GridItem>
+              <Button color="primary">Adicionar Lançamento</Button>
             </CardFooter>
           </Card>
         </GridItem>

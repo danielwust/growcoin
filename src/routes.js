@@ -1,9 +1,11 @@
 // @material-ui/icons
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
 import UserProfile from "views/UserProfile/UserProfile.js";
+import Release from "views/Release/Release.js";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import TableList from "views/TableList/TableList.js";
 import TableListEditions from "views/TableList/TableListEditions.js";
@@ -28,14 +30,22 @@ const dashboardRoutes = [
   {
     path: "/editions",
     name: "Lista Programas",
-    rtlName: "قائمة الجدول",
+    rtlName: "editions",
     icon: "content_paste",
     component: TableListEditions,
     layout: "/admin",
   },
   {
+    path: "/release",
+    name: "Lançamento",
+    rtlName: "release",
+    icon: AddCircleIcon,
+    component: Release,
+    layout: "/admin",
+  },
+  {
     path: "/user",
-    name: "Perfil",
+    name: "Meu Perfil",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
@@ -44,9 +54,9 @@ const dashboardRoutes = [
   {
     path: "/cadastrar-usuario",
     name: "Cadastrar Usuario",
-    rtlName: "التطور للاحترافية",
+    rtlName: "add user",
     icon: PersonAddIcon,
-    component: UserProfile, //mudar rota
+    component: UserProfile,
     layout: "/admin",
   },
 ];
