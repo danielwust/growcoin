@@ -41,34 +41,29 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function TableList() {
+export default function TableListEditions() {
   const classes = useStyles();
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
-        <Card plain>
-          <CardHeader plain color="primary">
-            <h4 className={classes.cardTitleWhite}>
-              Lista de todos usuarios de todas edições
-            </h4>
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>Lista de programas e edições</h4>
             <p className={classes.cardCategoryWhite}>
-              Selecione um usuario na qual deseja ver suas informações
+              Selecione o programa ou edição na qual deseja informações
             </p>
           </CardHeader>
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["ID", "Nome", "Edição", "Programa","Saldo GrowCoins", "Notas"]}
+              tableHead={["Edição", "Programa", "Mentor encarregado", "Ativos", "Inativos"]}
               tableData={[
-                ["1", "Daniel Wust", "4ª", "Starter", "9999", "100, 99, 100, 99"],
-                ["2", "Pamela", "4ª", "Starter", "9800", "99, 98, 99, 98"],
-                ["3", "Kley", "4ª", "Starter", "9700", "98, 97, 98, 97"],
-                ["4", "Dani", "4ª", "Starter", "9600", "97, 96, 97, 96"],
-                ["5", "Usuario", "3ª", "Starter", "3000", "90, 86, 90, 86"],
-                ["6", "Usuario", "2ª", "Starter", "2000", "90, 86, 90, 86"],
-                ["7", "Usuario", "5ª", "Starter", "1100", "90, 86, 90, 86"],
-                ["8", "Usuario", "6ª", "Starter", "500", "90, 86, 90, 86"],
-                ["9", "Usuario", "1ª", "Starter", "0", "90, 86, 90, 86"],
+                ["1ª Edição", "Starter", "Roger", "30", "2"],
+                ["2ª Edição", "Starter", "Vinicius", "30", "2"],
+                ["3ª Edição", "Starter", "Roger", "30", "2"],
+                ["4ª Edição", "Starter", "Vinicius", "30", "2"],
+                ["5ª Edição", "Starter", "Roger", "30", "2"],
+                ["6ª Edição", "Starter", "Vinicius", "30", "2"],
               ]}
             />
           </CardBody>

@@ -1,48 +1,36 @@
-/*!
-
-=========================================================
-* Material Dashboard React - v1.10.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 // @material-ui/icons
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
-import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
+import DashboardPage from "views/Dashboard/Dashboard.js";
 import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
-import Maps from "views/Maps/Maps.js";
-import NotificationsPage from "views/Notifications/Notifications.js";
-import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
-// core components/views for RTL layout
-import RTLPage from "views/RTLPage/RTLPage.js";
+import TableListEditions from "views/TableList/TableListEditions.js";
 
 const dashboardRoutes = [
   {
     path: "/dashboard",
-    name: "Geral",
+    name: "Visão Geral",
     rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
+    layout: "/admin",
+  },
+  {
+    path: "/table",
+    name: "Lista Usuarios",
+    rtlName: "قائمة الجدول",
+    icon: "list",
+    component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/editions",
+    name: "Lista Programas",
+    rtlName: "قائمة الجدول",
+    icon: "content_paste",
+    component: TableListEditions,
     layout: "/admin",
   },
   {
@@ -54,59 +42,11 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/table",
-    name: "Lista Usuarios",
-    rtlName: "قائمة الجدول",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin",
-  },
-  {
-    path: "/typography",
-    name: "Tipografia",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin",
-  },
-  {
-    path: "/icons",
-    name: "Icones",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/maps",
-    name: "Mapas",
-    rtlName: "خرائط",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin",
-  },
-  {
-    path: "/notifications",
-    name: "Notificações",
-    rtlName: "إخطارات",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin",
-  },
-  {
-    path: "/rtl-page",
-    name: "Pagina RTL",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-    component: RTLPage,
-    layout: "/rtl",
-  },
-  {
-    path: "/upgrade-to-pro",
-    name: "Atualizar para PRO",
+    path: "/cadastrar-usuario",
+    name: "Cadastrar Usuario",
     rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: UpgradeToPro,
+    icon: PersonAddIcon,
+    component: UserProfile, //mudar rota
     layout: "/admin",
   },
 ];
