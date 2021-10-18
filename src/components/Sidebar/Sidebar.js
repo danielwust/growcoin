@@ -79,9 +79,8 @@ export default function Sidebar(props) {
   var brand = (
     <div className={classes.logo}>
       <a
-        href="https://www.growdev.com.br"
+        href="/"
         className={classNames(classes.logoLink)}
-        target="_blank"
       >
         <div className={classes.logoImage}>
           {/* <img src={logo} alt="logo" className={classes.img} />*/}
