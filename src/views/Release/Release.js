@@ -60,9 +60,9 @@ export default function Release() {
                   <Select className={classes.selects}
                     labelId="growdever"
                     id="growdever"
-                    value={1}
-                    onChange={1+1}
+                    value="0"
                     >
+                    <MenuItem value={0} disabled>Selecione o aluno</MenuItem>
                     <MenuItem value={1}>Daniel</MenuItem>
                     <MenuItem value={2}>Pamela</MenuItem>
                     <MenuItem value={3}>Kley</MenuItem>
