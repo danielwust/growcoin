@@ -51,55 +51,53 @@ export default function UserTransaction() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={8}> 
+        <GridItem xs={12} sm={12} md={8}>
           <Card plain>
             <CardHeader plain color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Registro de transações
-              </h4>
+              <h4 className={classes.cardTitleWhite}>Registro de transações</h4>
               <p className={classes.cardCategoryWhite}>
                 Selecione o tipo de transação
               </p>
             </CardHeader>
             <CardBody>
               <CustomTabs
-              title=""
-              headerColor="primary"
-              tabs={[
-                {
-                  tabName: "Entradas",
-                  tabIcon: NotificationsActiveIcon,
-                  tabContent: (
-                    <Tasks
-                      checkedIndexes={[0, 3]}
-                      tasksIndexes={[0, 1, 2, 3]}
-                      tasks={solicitacoes}
-                    />
-                  ),
-                },
-                {
-                  tabName: "Saidas",
-                  tabIcon: ShoppingCartIcon,
-                  tabContent: (
-                    <Tasks
-                      checkedIndexes={[1]}
-                      tasksIndexes={[0, 1, 2]}
-                      tasks={entregas}
-                    />
-                  ),
-                },
-                {
-                  tabName: "Pendentes",
-                  tabIcon: BugReport,
-                  tabContent: (
-                    <Tasks
-                      checkedIndexes={[0]}
-                      tasksIndexes={[0, 1]}
-                      tasks={problemas}
-                    />
-                  ),
-                },
-              ]}
+                title=""
+                headerColor="primary"
+                tabs={[
+                  {
+                    tabName: "Entradas",
+                    tabIcon: NotificationsActiveIcon,
+                    tabContent: (
+                      <Tasks
+                        checkedIndexes={[0, 3]}
+                        tasksIndexes={[0, 1, 2, 3]}
+                        tasks={solicitacoes}
+                      />
+                    ),
+                  },
+                  {
+                    tabName: "Saidas",
+                    tabIcon: ShoppingCartIcon,
+                    tabContent: (
+                      <Tasks
+                        checkedIndexes={[1]}
+                        tasksIndexes={[0, 1, 2]}
+                        tasks={entregas}
+                      />
+                    ),
+                  },
+                  {
+                    tabName: "Pendentes",
+                    tabIcon: BugReport,
+                    tabContent: (
+                      <Tasks
+                        checkedIndexes={[0]}
+                        tasksIndexes={[0, 1]}
+                        tasks={problemas}
+                      />
+                    ),
+                  },
+                ]}
               />
             </CardBody>
           </Card>

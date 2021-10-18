@@ -48,7 +48,9 @@ export default function TableListEditions() {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Lista de programas e edições</h4>
+            <h4 className={classes.cardTitleWhite}>
+              Lista de programas e edições
+            </h4>
             <p className={classes.cardCategoryWhite}>
               Selecione o programa ou edição na qual deseja informações
             </p>
@@ -56,7 +58,13 @@ export default function TableListEditions() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Edição", "Programa", "Mentor encarregado", "Ativos", "Inativos"]}
+              tableHead={[
+                "Edição",
+                "Programa",
+                "Mentor encarregado",
+                "Ativos",
+                "Inativos",
+              ]}
               tableData={[
                 ["1ª Edição", "Starter", "Roger", "30", "2"],
                 ["2ª Edição", "Starter", "Vinicius", "30", "2"],

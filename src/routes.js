@@ -1,6 +1,6 @@
 // @material-ui/icons
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
-import AddCircleIcon from '@material-ui/icons/AddCircle';
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout

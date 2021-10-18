@@ -58,9 +58,23 @@ export default function TableList() {
           <CardBody>
             <TableLink
               tableHeaderColor="primary"
-              tableHead={["ID", "Nome", "Edição", "Programa","Saldo GrowCoins", "Notas"]}
+              tableHead={[
+                "ID",
+                "Nome",
+                "Edição",
+                "Programa",
+                "Saldo GrowCoins",
+                "Notas",
+              ]}
               tableData={[
-                ["1", "Daniel Wust", "4ª", "Starter", "9999", "100, 99, 100, 99"],
+                [
+                  "1",
+                  "Daniel Wust",
+                  "4ª",
+                  "Starter",
+                  "9999",
+                  "100, 99, 100, 99",
+                ],
                 ["2", "Pamela", "4ª", "Starter", "9800", "99, 98, 99, 98"],
                 ["3", "Dani", "4ª", "Starter", "9600", "98, 97, 98, 97"],
                 ["4", "Kley", "4ª", "Starter", "9700", "97, 96, 97, 96"],

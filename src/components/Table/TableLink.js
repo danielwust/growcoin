@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -38,14 +38,19 @@ export default function CustomTableLink(props) {
         ) : null}
         <TableBody>
           {tableData.map((prop, key) => {
-            {link = prop[0]}
+            {
+              link = prop[0];
+            }
             return (
               <TableRow key={key} className={classes.tableBodyRow}>
                 {prop.map((prop, key) => {
                   return (
                     <TableCell className={classes.tableCell} key={key}>
-                      <NavLink to={`transaction/${link}`} style={{color: "white"}}>
-                      {prop}
+                      <NavLink
+                        to={`transaction/${link}`}
+                        style={{ color: "white" }}
+                      >
+                        {prop}
                       </NavLink>
                     </TableCell>
                   );
