@@ -39,11 +39,12 @@ export default function AdminNavbarLinks() {
   const handleCloseNotification = () => {
     setOpenNotification(null);
   };
-  const handleClickProfile = (event) => { // no click no icone perfil
+  const handleClickProfile = (event) => {
+    // no click no icone perfil
     if (openProfile && openProfile.contains(event.target)) {
-    setOpenProfile(null); // no fechar
+      setOpenProfile(null); // no fechar
     } else {
-    setOpenProfile(event.currentTarget); //  no abrir
+      setOpenProfile(event.currentTarget); //  no abrir
     }
   };
   const handleCloseProfile = () => {
@@ -184,15 +185,15 @@ export default function AdminNavbarLinks() {
                 <ClickAwayListener onClickAway={handleCloseProfile}>
                   <MenuList role="menu">
                     <Link to="user">
-                    <MenuItem
-                      className={classes.dropdownItem}>
-                      Meu Perfil
-                    </MenuItem>
+                      <MenuItem className={classes.dropdownItem}>
+                        Meu Perfil
+                      </MenuItem>
                     </Link>
                     <Link to="config">
                       <MenuItem
                         onClick={handleCloseProfile}
-                        className={classes.dropdownItem}>
+                        className={classes.dropdownItem}
+                      >
                         Configurações
                       </MenuItem>
                     </Link>
@@ -200,7 +201,8 @@ export default function AdminNavbarLinks() {
                       <Divider light />
                       <MenuItem
                         onClick={handleCloseProfile}
-                        className={classes.dropdownItem}>
+                        className={classes.dropdownItem}
+                      >
                         Encerrar sessão
                       </MenuItem>
                     </Link>

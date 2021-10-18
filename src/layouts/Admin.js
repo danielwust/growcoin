@@ -39,7 +39,7 @@ const switchRoutes = (
 );
 
 // cortando as ultimas rotas
-const novasRotas = routes.splice(0,5)
+const novasRotas = routes.splice(0, 5);
 
 const useStyles = makeStyles(styles);
 

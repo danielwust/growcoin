@@ -133,7 +133,7 @@ export default function UserProfile() {
               </GridContainer>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
-                <CustomInput
+                  <CustomInput
                     labelText="BIOGRAFIA"
                     formControlProps={{
                       disabled: true,

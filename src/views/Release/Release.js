@@ -1,8 +1,8 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
 // import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 // core components
@@ -57,22 +57,26 @@ export default function Release() {
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
-                  <Select className={classes.selects}
+                  <Select
+                    className={classes.selects}
                     labelId="growdever"
                     id="growdever"
-                    value={1}
-                    onChange={1+1}
-                    >
+                    value="0"
+                  >
+                    <MenuItem value={0} disabled>
+                      Selecione o aluno
+                    </MenuItem>
                     <MenuItem value={1}>Daniel</MenuItem>
                     <MenuItem value={2}>Pamela</MenuItem>
                     <MenuItem value={3}>Kley</MenuItem>
                     <MenuItem value={4}>Dani</MenuItem>
                   </Select>
-                  <Select className={classes.selects}
+                  <Select
+                    className={classes.selects}
                     labelId="growdever"
                     value={1}
                     id="tipo"
-                    >
+                  >
                     <MenuItem value={1}>Entrada</MenuItem>
                     <MenuItem value={2}>Saida</MenuItem>
                   </Select>

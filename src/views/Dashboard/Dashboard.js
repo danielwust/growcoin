@@ -26,7 +26,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Table from "components/Table/Table.js";
 import Tasks from "components/Tasks/Tasks.js";
 import Card from "components/Card/Card.js";
- // external data
+// external data
 import { solicitacoes, entregas, problemas } from "variables/general.js";
 
 import {
