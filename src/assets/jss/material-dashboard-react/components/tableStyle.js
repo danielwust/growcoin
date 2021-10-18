@@ -40,7 +40,7 @@ const tableStyle = (theme) => ({
     borderCollapse: "collapse",
   },
   tableHeadCell: {
-    color: "white",
+    color: "black",
     ...defaultFont,
     "&, &$tableCell": {
       fontSize: "1em",
