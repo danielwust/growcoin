@@ -246,8 +246,8 @@ export default function Dashboard() {
                 tableData={[
                   ["1", "Daniel", "100", "4ª Starter"],
                   ["2", "Pâmela", "99", "4ª Starter"],
-                  ["3", "Kley", "95", "4ª Starter"],
-                  ["4", "Dani", "92", "4ª Starter"],
+                  ["3", "Dani", "98", "4ª Starter"],
+                  ["4", "Kley", "97", "4ª Starter"],
                 ]}
               />
             </CardBody>

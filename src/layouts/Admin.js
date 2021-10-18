@@ -38,7 +38,7 @@ const switchRoutes = (
   </Switch>
 );
 
-// verificar se nao vai bugar devido cache react
+// cortando as ultimas rotas
 const novasRotas = routes.splice(0,5)
 
 const useStyles = makeStyles(styles);

@@ -9,6 +9,7 @@ import Release from "views/Release/Release.js";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import TableList from "views/TableList/TableList.js";
 import TableListEditions from "views/TableList/TableListEditions.js";
+import UserTransaction from "views/UserTransaction/UserTransaction";
 
 const dashboardRoutes = [
   {
@@ -51,12 +52,21 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin",
   },
+  // Para ler as rotas abaixo alterar o arquivo Admin.js
   {
     path: "/user",
     name: "Meu Perfil",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/transaction/:id",
+    name: "Transações",
+    rtlName: "ملف تعريفي للمستخدم",
+    icon: Person,
+    component: UserTransaction,
     layout: "/admin",
   },
 ];

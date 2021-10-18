@@ -43,7 +43,7 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function UserProfile() {
+export default function Release() {
   const classes = useStyles();
   return (
     <div>
