@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
-import Table from "components/Table/Table.js";
+import TableLink from "components/Table/TableLink.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
@@ -56,14 +56,14 @@ export default function TableList() {
             </p>
           </CardHeader>
           <CardBody>
-            <Table
+            <TableLink
               tableHeaderColor="primary"
               tableHead={["ID", "Nome", "Edição", "Programa","Saldo GrowCoins", "Notas"]}
               tableData={[
                 ["1", "Daniel Wust", "4ª", "Starter", "9999", "100, 99, 100, 99"],
                 ["2", "Pamela", "4ª", "Starter", "9800", "99, 98, 99, 98"],
-                ["3", "Kley", "4ª", "Starter", "9700", "98, 97, 98, 97"],
-                ["4", "Dani", "4ª", "Starter", "9600", "97, 96, 97, 96"],
+                ["3", "Dani", "4ª", "Starter", "9600", "98, 97, 98, 97"],
+                ["4", "Kley", "4ª", "Starter", "9700", "97, 96, 97, 96"],
                 ["5", "Usuario", "3ª", "Starter", "3000", "90, 86, 90, 86"],
                 ["6", "Usuario", "2ª", "Starter", "2000", "90, 86, 90, 86"],
                 ["7", "Usuario", "5ª", "Starter", "1100", "90, 86, 90, 86"],
