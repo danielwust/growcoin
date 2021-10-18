@@ -21,6 +21,8 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
@@ -88,7 +90,7 @@ export default function AdminNavbarLinks() {
           className={classes.buttonLink}
         >
           <Notifications className={classes.icons} />
-          <span className={classes.notifications}>5</span>
+          <span className={classes.notifications}>3</span>
           <Hidden mdUp implementation="css">
             <p onClick={handleCloseNotification} className={classes.linkText}>
               Notification
@@ -181,25 +183,27 @@ export default function AdminNavbarLinks() {
               <Paper>
                 <ClickAwayListener onClickAway={handleCloseProfile}>
                   <MenuList role="menu">
+                    <Link to="user">
                     <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
+                      className={classes.dropdownItem}>
                       Meu Perfil
                     </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
-                      Configurações
-                    </MenuItem>
-                    <Divider light />
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
-                      Encerrar sessão
-                    </MenuItem>
+                    </Link>
+                    <Link to="config">
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={classes.dropdownItem}>
+                        Configurações
+                      </MenuItem>
+                    </Link>
+                    <Link to="logout">
+                      <Divider light />
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={classes.dropdownItem}>
+                        Encerrar sessão
+                      </MenuItem>
+                    </Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

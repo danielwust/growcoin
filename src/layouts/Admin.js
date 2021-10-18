@@ -38,6 +38,9 @@ const switchRoutes = (
   </Switch>
 );
 
+// cortando as ultimas rotas
+const novasRotas = routes.splice(0,5)
+
 const useStyles = makeStyles(styles);
 
 export default function Admin({ ...rest }) {
@@ -95,7 +98,7 @@ export default function Admin({ ...rest }) {
   return (
     <div className={classes.wrapper}>
       <Sidebar
-        routes={routes}
+        routes={novasRotas}
         logoText={"GROWCOIN"}
         logo={logo}
         image={image}
