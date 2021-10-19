@@ -20,7 +20,7 @@
     "prop-types": "15.7.2"
   },
   "scripts": {
-    "build": "rm -rf node_modules/ && rm -rf package-lock.json && yarn install && npm start",
+    "build": "yarn install && yarn start",
     "start": "react-scripts start",
     "build:production": "react-scripts build",
     "eject": "react-scripts eject",
