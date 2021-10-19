@@ -1,41 +1,35 @@
-const gulp = require("gulp");
-const gap = require("gulp-append-prepend");
+import { task, src, dest } from "gulp";
+import { prependText } from "gulp-append-prepend";
 
-gulp.task("licenses", async function () {
-  gulp
-    .src("build/static/js/*chunk.js", { base: "./" })
+task("licenses", async function () {
+  src("build/static/js/*chunk.js", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
-
+      prependText(`/*!
 =========================================================
 * Growcoin - v1.0.0
 =========================================================
 */`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(dest("./", { overwrite: true }));
 
-  gulp
-    .src("build/index.html", { base: "./" })
+  src("build/index.html", { base: "./" })
     .pipe(
-      gap.prependText(`<!--
-
+      prependText(`<!--
 =========================================================
 * Growcoin - v1.0.0
 =========================================================
 -->`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(dest("./", { overwrite: true }));
 
-  gulp
-    .src("build/static/css/*chunk.css", { base: "./" })
+  src("build/static/css/*chunk.css", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
-
+      prependText(`/*!
 =========================================================
 * Growcoin - v1.0.0
 =========================================================
 */`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(dest("./", { overwrite: true }));
   return;
 });
