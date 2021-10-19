@@ -1,12 +1,17 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-    "transform-class-properties",
-    "transform-react-jsx",
-    "transform-object-rest-spread",
-    ["module-resolver", {
-      "root": ["./src"]
-      }],
-      ["import-rename", {"^(.*)\\.jsx$": "$1"}]
-    ]
-  }
+  "exclude": "/(node_modules|bower_components)/",
+  "loader" : "babel",
+  "extends": "react-app",
+  "query"  : {
+    "presets": ["react", "es6"],
+    "plugins": [
+      "transform-class-properties",
+      "transform-react-jsx",
+      "transform-object-rest-spread",
+      ["module-resolver", {
+        "root": ["./src"]
+        }],
+        ["import-rename", {"^(.*)\\.jsx$": "$1"}]
+      ]
+    }
+}
