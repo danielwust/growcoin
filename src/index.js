@@ -11,9 +11,9 @@ import "assets/css/material-dashboard-react.css?v=1.10.0";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/admin" component={Admin} />
+      <Route path="/static" component={Admin} />
       <Route path="/rtl" component={RTL} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Redirect from="/" to="/static/dashboard" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
