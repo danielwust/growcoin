@@ -23,7 +23,7 @@ let ps;
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/static") {
+      if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -34,7 +34,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/static" to="/static/dashboard" />
+    <Redirect from="/admin" to="/admin/dashboard" />
   </Switch>
 );
 

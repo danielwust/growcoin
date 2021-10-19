@@ -18,7 +18,7 @@ const dashboardRoutes = [
     rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
-    layout: "/static",
+    layout: "/admin",
   },
   {
     path: "/table",
@@ -26,7 +26,7 @@ const dashboardRoutes = [
     rtlName: "قائمة الجدول",
     icon: "list",
     component: TableList,
-    layout: "/static",
+    layout: "/admin",
   },
   {
     path: "/editions",
@@ -34,7 +34,7 @@ const dashboardRoutes = [
     rtlName: "editions",
     icon: "content_paste",
     component: TableListEditions,
-    layout: "/static",
+    layout: "/admin",
   },
   {
     path: "/release",
@@ -42,7 +42,7 @@ const dashboardRoutes = [
     rtlName: "release",
     icon: AddCircleIcon,
     component: Release,
-    layout: "/static",
+    layout: "/admin",
   },
   {
     path: "/cadastrar-usuario",
@@ -50,7 +50,7 @@ const dashboardRoutes = [
     rtlName: "add user",
     icon: PersonAddIcon,
     component: UserProfile,
-    layout: "/static",
+    layout: "/admin",
   },
   // Para ler as rotas abaixo alterar o arquivo Admin.js
   {
@@ -59,7 +59,7 @@ const dashboardRoutes = [
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
-    layout: "/static",
+    layout: "/admin",
   },
   {
     path: "/transaction/:id",
@@ -67,7 +67,7 @@ const dashboardRoutes = [
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserTransaction,
-    layout: "/static",
+    layout: "/admin",
   },
 ];
 
