@@ -68,7 +68,7 @@ export default function TableList() {
                 "Saldo GrowCoins",
                 "Notas",
               ]}
-              tableData={users.users.map((user) => user.data)}
+              tableData={users.map((user) => user.data)}
             />
           </CardBody>
         </Card>

@@ -5,8 +5,8 @@ var delays = 80,
 var delays2 = 80,
   durations2 = 500;
 
-const fixedLabel = users.users.map((u) => u.data[0]);
-const fixedSerie = users.users.map((u) => u.lastNote);
+const fixedLabel = users.map((u) => u.data[0]);
+const fixedSerie = users.map((u) => u.lastNote);
 
 export const dailySalesChart = {
   data: {
