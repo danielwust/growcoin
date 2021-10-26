@@ -9,6 +9,8 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
+import editions from "variables/editions";
+
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -58,21 +60,8 @@ export default function TableListEditions() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={[
-                "Edição",
-                "Programa",
-                "Mentor encarregado",
-                "Ativos",
-                "Inativos",
-              ]}
-              tableData={[
-                ["1ª Edição", "Starter", "Roger", "30", "2"],
-                ["2ª Edição", "Starter", "Vinicius", "30", "2"],
-                ["3ª Edição", "Starter", "Roger", "30", "2"],
-                ["4ª Edição", "Starter", "Vinicius", "30", "2"],
-                ["5ª Edição", "Starter", "Roger", "30", "2"],
-                ["6ª Edição", "Starter", "Vinicius", "30", "2"],
-              ]}
+              tableHead={editions.info}
+              tableData={editions.data}
             />
           </CardBody>
         </Card>

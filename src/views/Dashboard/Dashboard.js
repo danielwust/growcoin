@@ -28,7 +28,7 @@ import Tasks from "components/Tasks/Tasks.js";
 import Card from "components/Card/Card.js";
 // external data
 import { solicitacoes, entregas, problemas } from "variables/general.js";
-
+import users from "variables/users";
 import {
   dailySalesChart,
   notas,
@@ -36,10 +36,6 @@ import {
 } from "variables/charts.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
-
-// import Store from "@material-ui/icons/Store";
-// import Code from "@material-ui/icons/Code";
-// import Cloud from "@material-ui/icons/Cloud";
 
 const useStyles = makeStyles(styles);
 
@@ -243,12 +239,17 @@ export default function Dashboard() {
               <Table
                 tableHeaderColor="warning"
                 tableHead={["ID", "Nome", "Média", "Edição"]}
-                tableData={[
-                  ["1", "Daniel", "100", "4ª Starter"],
-                  ["2", "Pâmela", "99", "4ª Starter"],
-                  ["3", "Dani", "98", "4ª Starter"],
-                  ["4", "Kley", "97", "4ª Starter"],
-                ]}
+                tableData={users
+                  .map(
+                    (user) =>
+                      new Array(
+                        user.data[0],
+                        user.name,
+                        user.lastNote,
+                        user.data[3]
+                      )
+                  )
+                  .slice(0, 4)}
               />
             </CardBody>
           </Card>
