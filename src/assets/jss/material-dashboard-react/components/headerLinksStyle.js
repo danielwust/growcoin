@@ -32,6 +32,7 @@ const headerLinksStyle = (theme) => ({
     margin: "0px",
   },
   buttonLink: {
+    color: whiteColor,
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       margin: "10px 15px 0",
@@ -102,6 +103,7 @@ const headerLinksStyle = (theme) => ({
     display: "inline-block",
   },
   searchWrapper: {
+    color: "white",
     [theme.breakpoints.down("sm")]: {
       width: "-webkit-fill-available",
       margin: "10px 15px 0",
