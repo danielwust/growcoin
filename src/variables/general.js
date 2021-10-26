@@ -1,17 +1,17 @@
 export var solicitacoes = [
-  'Sign contract for "What are conference organizers afraid of?"',
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  "Create 4 Invisible User Experiences you Never Knew About",
+  "Camiseta official coloração escura",
+  "Xicara para café personalizada com foto",
+  "Teclado mecanico de até xxx valor da marca",
+  "KIT Termica Chimarrão cuia e bomba",
 ];
 export var entregas = [
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"',
+  "Xicara para café personalizada com foto",
+  "Teclado mecanico de até xxx valor da marca",
+  "Camiseta official coloração escura",
 ];
 export var problemas = [
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"',
+  "Xicara para café personalizada saiu com foto borrada",
+  "Camiseta official venho com um rasganzinho na parte inferior",
 ];
 
 export default {
