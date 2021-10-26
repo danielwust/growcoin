@@ -9,6 +9,8 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
+import users from "variables/users";
+
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -66,24 +68,7 @@ export default function TableList() {
                 "Saldo GrowCoins",
                 "Notas",
               ]}
-              tableData={[
-                [
-                  "1",
-                  "Daniel Wust",
-                  "4ª",
-                  "Starter",
-                  "9999",
-                  "100, 99, 100, 99",
-                ],
-                ["2", "Pamela", "4ª", "Starter", "9800", "99, 98, 99, 98"],
-                ["3", "Dani", "4ª", "Starter", "9600", "98, 97, 98, 97"],
-                ["4", "Kley", "4ª", "Starter", "9700", "97, 96, 97, 96"],
-                ["5", "Usuario", "3ª", "Starter", "3000", "90, 86, 90, 86"],
-                ["6", "Usuario", "2ª", "Starter", "2000", "90, 86, 90, 86"],
-                ["7", "Usuario", "5ª", "Starter", "1100", "90, 86, 90, 86"],
-                ["8", "Usuario", "6ª", "Starter", "500", "90, 86, 90, 86"],
-                ["9", "Usuario", "1ª", "Starter", "0", "90, 86, 90, 86"],
-              ]}
+              tableData={users.users.map((user) => user.data)}
             />
           </CardBody>
         </Card>
