@@ -1,20 +1,24 @@
-var Chartist = require("chartist");
+import { Interpolation, Svg } from "chartist";
+import users from "./users";
 var delays = 80,
   durations = 500;
 var delays2 = 80,
   durations2 = 500;
 
-const dailySalesChart = {
+const fixedLabel = users.users.map((u) => u.data[0]);
+const fixedSerie = users.users.map((u) => u.lastNote);
+
+export const dailySalesChart = {
   data: {
-    labels: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª", "7ª"],
-    series: [[12, 17, 7, 17, 23, 18, 38]],
+    labels: fixedLabel,
+    series: [fixedSerie],
   },
   options: {
-    lineSmooth: Chartist.Interpolation.cardinal({
+    lineSmooth: Interpolation.cardinal({
       tension: 0,
     }),
-    low: 0,
-    high: 50,
+    low: 70,
+    high: 110,
     chartPadding: {
       top: 0,
       right: 0,
@@ -35,7 +39,7 @@ const dailySalesChart = {
               .translate(0, data.chartRect.height())
               .stringify(),
             to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint,
+            easing: Svg.Easing.easeOutQuint,
           },
         });
       } else if (data.type === "point") {
@@ -53,17 +57,17 @@ const dailySalesChart = {
   },
 };
 
-const notas = {
+export const notas = {
   data: {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    series: [[71, 73, 76, 82, 84, 86, 88, 90, 95, 100]],
+    labels: fixedLabel.slice(0, 5),
+    series: [fixedSerie.slice(0, 5)],
   },
   options: {
     axisX: {
       showGrid: false,
     },
-    low: 70,
-    high: 100,
+    low: 85,
+    high: 101,
     chartPadding: {
       top: 0,
       right: 5,
@@ -101,17 +105,17 @@ const notas = {
   },
 };
 
-const completedTasksChart = {
+export const completedTasksChart = {
   data: {
-    labels: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª", "7ª", "8ª"],
-    series: [[70, 58, 47, 35, 30, 46, 20, 15]],
+    labels: fixedLabel.slice(0, 5),
+    series: [fixedSerie.sort().reverse().slice(0, 5)],
   },
   options: {
-    lineSmooth: Chartist.Interpolation.cardinal({
+    lineSmooth: Interpolation.cardinal({
       tension: 0,
     }),
-    low: 0,
-    high: 100,
+    low: 70,
+    high: 110,
     chartPadding: {
       top: 0,
       right: 0,
@@ -132,7 +136,7 @@ const completedTasksChart = {
               .translate(0, data.chartRect.height())
               .stringify(),
             to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint,
+            easing: Svg.Easing.easeOutQuint,
           },
         });
       } else if (data.type === "point") {
@@ -150,8 +154,8 @@ const completedTasksChart = {
   },
 };
 
-module.exports = {
+export default {
+  completedTasksChart,
   dailySalesChart,
   notas,
-  completedTasksChart,
 };
