@@ -173,14 +173,14 @@ export default function AdminNavbarLinks() {
                         Meu Perfil
                       </MenuItem>
                     </Link>
-                    <Link to="config">
+                    {/* <Link to="config">
                       <MenuItem
                         onClick={handleCloseProfile}
                         className={classes.dropdownItem}
                       >
                         Configurações
                       </MenuItem>
-                    </Link>
+                    </Link> */}
                     <Link to="logout">
                       <Divider light />
                       <MenuItem
@@ -206,20 +206,21 @@ export default function AdminNavbarLinks() {
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Search from "@material-ui/icons/Search";
 
- <div className={classes.searchWrapper}>
-        <CustomInput
-          formControlProps={{
-            className: classes.margin + " " + classes.search,
-          }}
-          inputProps={{
-            placeholder: "Search",
-            inputProps: {
-              "aria-label": "Search",
-            },
-          }}
-        />
-        <Button color="white" aria-label="edit" justIcon round>
-          <Search />
-        </Button>
-      </div> */
+<div className={classes.searchWrapper}>
+<CustomInput
+formControlProps={{
+className: classes.margin + " " + classes.search,
+}}
+inputProps={{
+placeholder: "Search",
+inputProps: {
+"aria-label": "Search",
+},
+}}
+/>
+<Button color="white" aria-label="edit" justIcon round>
+<Search />
+</Button>
+</div>
+*/
 }
