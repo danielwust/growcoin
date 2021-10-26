@@ -4,22 +4,19 @@ import { makeStyles } from "@material-ui/core/styles";
 // import StarIcon from '@mui/icons-material/Star';
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import BugReport from "@material-ui/icons/BugReport";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
-import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
-import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import Tasks from "components/Tasks/Tasks.js";
 import CardHeader from "components/Card/CardHeader.js";
+import User from "components/User/User";
 
 import { solicitacoes, entregas, problemas } from "variables/general.js";
-
-import avatar from "assets/img/faces/sem-foto.png";
+import users from "variables/users";
 
 const styles = {
   cardCategoryWhite: {
@@ -103,24 +100,7 @@ export default function UserTransaction() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
-          <Card profile>
-            <CardAvatar profile>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
-            <CardBody profile>
-              <h6 className={classes.cardCategory}>Edição - Programa</h6>
-              <h4 className={classes.cardTitle}>Nome GrowDever</h4>
-              <p className={classes.description}>
-                Descrição do growdever de acordo com feedback do mentor
-                encarregado
-              </p>
-              <Button color="primary" round>
-                <StarBorderIcon></StarBorderIcon>
-              </Button>
-            </CardBody>
-          </Card>
+          <User user={users[0]} />
         </GridItem>
       </GridContainer>
     </div>

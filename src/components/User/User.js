@@ -36,6 +36,7 @@ const styles = {
 };
 
 export default function User(user) {
+  const u = user.user;
   const classes = useStyles();
 
   return (
@@ -47,9 +48,11 @@ export default function User(user) {
           </a>
         </CardAvatar>
         <CardBody profile>
-          <h6 className={classes.cardCategory}>Edição - Programa</h6>
-          <h4 className={classes.cardTitle}>{`${user.user.name}`}</h4>
-          <p className={classes.description}>{user.user.description}</p>
+          <h6
+            className={classes.cardCategory}
+          >{`${u.data[2]} Edição - ${u.data[3]}`}</h6>
+          <h4 className={classes.cardTitle}>{u.name}</h4>
+          <p className={classes.description}>{u.description}</p>
           <Button color="primary" round>
             <StarBorderIcon></StarBorderIcon>
           </Button>

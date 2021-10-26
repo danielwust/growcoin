@@ -157,7 +157,7 @@ export default function UserProfile() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
-          <User user={users.users[0]} />
+          <User user={users[0]} />
         </GridItem>
       </GridContainer>
     </div>
