@@ -9,6 +9,7 @@
     "@material-ui/icons": "4.11.2",
     "chartist": "0.10.1",
     "classnames": "2.3.1",
+    "cross-env": "^7.0.3",
     "history": "5.0.0",
     "perfect-scrollbar": "1.5.1",
     "prop-types": "15.7.2",
@@ -20,7 +21,7 @@
     "react-swipeable-views": "0.13.9"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env set PORT=env.PORT && react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --env=jsdom",
